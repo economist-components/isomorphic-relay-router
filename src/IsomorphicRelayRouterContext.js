@@ -1,4 +1,4 @@
-import IsomorphicRelay from 'isomorphic-relay';
+import IsomorphicRelay from '@economist/isomorphic-relay';
 import React from 'react';
 import RelayRouterContext from 'react-router-relay/lib/RelayRouterContext';
 

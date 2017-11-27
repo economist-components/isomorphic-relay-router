@@ -14,15 +14,15 @@ import MarkAllTodosMutation from '../mutations/MarkAllTodosMutation';
 import Todo from './Todo';
 
 import React from 'react';
-import Relay from 'react-relay';
+import Relay from 'react-relay/classic';
 
 class TodoList extends React.Component {
   static contextTypes = {
-    relay: Relay.PropTypes.Environment,
+    relay: Relay.PropTypes.ClassicRelay,
   };
   _handleMarkAllChange = (e) => {
     var complete = e.target.checked;
-    this.context.relay.commitUpdate(
+    this.context.relay.environment.commitUpdate(
       new MarkAllTodosMutation({
         complete,
         todos: this.props.viewer.todos,

@@ -15,14 +15,14 @@ import TodoListFooter from './TodoListFooter';
 import TodoTextInput from './TodoTextInput';
 
 import React from 'react';
-import Relay from 'react-relay';
+import Relay from 'react-relay/classic';
 
 class TodoApp extends React.Component {
   static contextTypes = {
-    relay: Relay.PropTypes.Environment,
+    relay: Relay.PropTypes.ClassicRelay,
   };
   _handleTextInputSave = (text) => {
-    this.context.relay.commitUpdate(
+    this.context.relay.environment.commitUpdate(
       new AddTodoMutation({text, viewer: this.props.viewer})
     );
   };

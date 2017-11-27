@@ -1,4 +1,4 @@
-import IsomorphicRelay from 'isomorphic-relay';
+import IsomorphicRelay from '@economist/isomorphic-relay';
 import IsomorphicQueryAggregator from './IsomorphicQueryAggregator';
 import render from './render';
 

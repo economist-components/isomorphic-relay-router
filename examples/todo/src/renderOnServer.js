@@ -1,9 +1,9 @@
-import IsomorphicRouter from 'isomorphic-relay-router';
+import IsomorphicRouter from '@economist/isomorphic-relay-router';
 import path from 'path';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { match } from 'react-router';
-import Relay from 'react-relay';
+import Relay from 'react-relay/classic';
 import routes from './routes';
 
 const GRAPHQL_URL = `http://localhost:8080/graphql`;

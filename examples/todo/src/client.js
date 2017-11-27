@@ -1,9 +1,9 @@
-import IsomorphicRelay from 'isomorphic-relay';
-import IsomorphicRouter from 'isomorphic-relay-router';
+import IsomorphicRelay from '@economist/isomorphic-relay';
+import IsomorphicRouter from '@economist/isomorphic-relay-router';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { browserHistory, match, Router } from 'react-router';
-import Relay from 'react-relay';
+import Relay from 'react-relay/classic';
 import routes from './routes';
 
 const environment = new Relay.Environment();

@@ -27,7 +27,7 @@ prepare the data using `IsomorphicRouter.prepareData`, then render React markup 
 `IsomorphicRouter.render` (pass the `props` returned by `IsomorphicRouter.prepareData`), and send
 the React output along with the data to the client:
 ```javascript
-import IsomorphicRouter from 'isomorphic-relay-router';
+import IsomorphicRouter from '@economist/isomorphic-relay-router';
 
 app.get('/*', (req, res, next) => {
   match({routes, location: req.originalUrl}, (error, redirectLocation, renderProps) => {
@@ -59,7 +59,7 @@ to the Relay store using `IsomorphicRelay.injectPreparedData`, then prepare init
 `IsomorphicRelay.prepareInitialRender`, and render React using `Router` from *react-router* (pass
 the `props` returned by `IsomorphicRouter.prepareInitialRender`):
 ```javascript
-import IsomorphicRouter from 'isomorphic-relay-router';
+import IsomorphicRouter from '@economist/isomorphic-relay-router';
 
 const environment = new Relay.Environment();
 

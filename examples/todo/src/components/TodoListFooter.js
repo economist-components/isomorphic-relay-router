@@ -14,14 +14,14 @@ import {IndexLink, Link} from 'react-router';
 import RemoveCompletedTodosMutation from '../mutations/RemoveCompletedTodosMutation';
 
 import React from 'react';
-import Relay from 'react-relay';
+import Relay from 'react-relay/classic';
 
 class TodoListFooter extends React.Component {
   static contextTypes = {
-    relay: Relay.PropTypes.Environment,
+    relay: Relay.PropTypes.ClassicRelay,
   };
   _handleRemoveCompletedTodosClick = () => {
-    this.context.relay.commitUpdate(
+    this.context.relay.environment.commitUpdate(
       new RemoveCompletedTodosMutation({
         todos: this.props.viewer.todos,
         viewer: this.props.viewer,

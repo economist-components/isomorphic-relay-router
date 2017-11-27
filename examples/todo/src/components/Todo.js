@@ -16,19 +16,19 @@ import RenameTodoMutation from '../mutations/RenameTodoMutation';
 import TodoTextInput from './TodoTextInput';
 
 import React from 'react';
-import Relay from 'react-relay';
+import Relay from 'react-relay/classic';
 import classnames from 'classnames';
 
 class Todo extends React.Component {
   static contextTypes = {
-    relay: Relay.PropTypes.Environment,
+    relay: Relay.PropTypes.ClassicRelay,
   };
   state = {
     isEditing: false,
   };
   _handleCompleteChange = (e) => {
     var complete = e.target.checked;
-    this.context.relay.commitUpdate(
+    this.context.relay.environment.commitUpdate(
       new ChangeTodoStatusMutation({
         complete,
         todo: this.props.todo,
@@ -51,12 +51,12 @@ class Todo extends React.Component {
   };
   _handleTextInputSave = (text) => {
     this._setEditMode(false);
-    this.context.relay.commitUpdate(
+    this.context.relay.environment.commitUpdate(
       new RenameTodoMutation({todo: this.props.todo, text})
     );
   };
   _removeTodo() {
-    this.context.relay.commitUpdate(
+    this.context.relay.environment.commitUpdate(
       new RemoveTodoMutation({todo: this.props.todo, viewer: this.props.viewer})
     );
   }

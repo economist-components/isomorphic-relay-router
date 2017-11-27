@@ -12,8 +12,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-var {PropTypes} = React;
+import PropTypes from 'prop-types';
 
 var ENTER_KEY_CODE = 13;
 var ESC_KEY_CODE = 27;

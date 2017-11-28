@@ -57,7 +57,9 @@
     "react": "^16.0.0",
     "react-relay": "^1.4.1",
     "react-router": "^3.0.0",
-    "relay-compiler": "^1.4.1"
+    "relay-compiler": "^1.4.1",
+    "semantic-release": "^4.3.5",
+    "travis-after-all": "^1.4.4"
   },
   "peerDependencies": {
     "@economist/isomorphic-relay": "^1.0.0",
